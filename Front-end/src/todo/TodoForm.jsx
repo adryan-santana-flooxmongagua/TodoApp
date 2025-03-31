@@ -17,7 +17,7 @@ class TodoForm extends Component {
     }
 
     keyHandler(e) {
-        const { add, search, description } = this.props 
+        const { add ,search, description } = this.props 
         if (e.key === 'Enter') {
             e.shiftKey ? search() : add(description)
         } else if (e.key === 'Escape') {
@@ -26,7 +26,7 @@ class TodoForm extends Component {
     }
 
     render() {
-        const { add, search, description } = this.props
+        const { add ,search, description } = this.props
         return (
             <div role='form' className='todoForm'>
             <Grid cols='12 9 10'>
@@ -37,7 +37,7 @@ class TodoForm extends Component {
                 {/* Mudamos o nome da propriedade style para btnStyle, pois o Lint reclamava e essa é a melhor maneira de contornar esse problema */}
                 <IconButton btnStyle='primary' icon='plus' onClick={() => add(description)}></IconButton>
                 <IconButton btnStyle='info' icon='search' onClick={() => search()}/>
-                <IconButton btnStyle='default' icon='close' onClick={this.props.handleClear}/>
+                <IconButton btnStyle='default' icon='close' onClick={this.handleClear}/>
             </Grid>
         </div>
         )
