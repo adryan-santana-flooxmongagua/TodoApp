@@ -26,7 +26,7 @@ class TodoForm extends Component {
     }
 
     render() {
-        const { add ,search, description } = this.props
+        const { add, search, description } = this.props
         return (
             <div role='form' className='todoForm'>
             <Grid cols='12 9 10'>
@@ -36,7 +36,7 @@ class TodoForm extends Component {
             <Grid cols='12 3 2'>
                 {/* Mudamos o nome da propriedade style para btnStyle, pois o Lint reclamava e essa é a melhor maneira de contornar esse problema */}
                 <IconButton btnStyle='primary' icon='plus' onClick={() => add(description)}></IconButton>
-                <IconButton btnStyle='info' icon='search' onClick={() => search()}/>
+                <IconButton btnStyle='info' icon='search' onClick={search}/>
                 <IconButton btnStyle='default' icon='close' onClick={this.props.clear}/>
             </Grid>
         </div>
